@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Spring Mvc Web App</title>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<script type="text/javascript">
+/*
+	var params = {
+		userId : 1,
+		productId : 1,
+		quantity : 3
+	};
+	// 通过POST请求后端
+	$.post("./purchase", params, function(result) {
+		alert(result.message);
+	});
+*/
+	for (var i=1; i<=50; i++) {
+	    var params = {
+	        userId : 1,
+	        productId : 1,
+	        quantity : 1
+	    };
+	    // 通过POST请求后端,这里的JavaScript会采用异步请求
+	    $.post("./purchase", params, function(result) {
+
+	    });
+
+	}
+
+</script>
+
+<body>
+<h1>抢购产品测试</h1>
+</body>
+</html>

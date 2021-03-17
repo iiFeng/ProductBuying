@@ -1,0 +1,36 @@
+server:
+  port: ${APP_PORT:8080}
+
+spring:
+  application:
+    name: ${APP_NAME:unnamed}
+  datasource:
+    url: jdbc:mysql://192.168.232.232:3306/product_buying?useSSL=false&characterEncoding=utf8
+    username: root
+    password: 123456
+    #dirver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      max-idle: 10
+      max-active: 50
+      max-wait: 10000
+      initial-size: 5
+      default-transaction-isolation: 2
+    mvc:
+      view:
+        prefix: /WEB-INF/jsp/
+        suffix: .jsp
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+    ssl: ${REDIS_SSL:false}
+    database: ${REDIS_DATABASE:0}
+    jedis:
+      pool:
+        min-idle: 5
+        max-active: 10
+        max-idle: 10
+        max-wait: 2000
+pebble:
+  suffix:
+  cache: false
